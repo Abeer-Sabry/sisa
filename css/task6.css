@@ -1,0 +1,639 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --maincolor:#8bc34a;
+    --main2color:#0c1824;
+}
+img{
+    width: 100%;
+}
+html{
+    font-size: 13px;
+}
+.container{
+    width: 85%;
+    padding-right:70px ;
+    margin: 0 auto;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+}
+section{
+    padding:100px 0;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+a,span{
+    display: inline-block;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.main-color{
+    color: var(--maincolor);
+}
+/*==== header====*/
+header{
+    background-image: url(../img/cute-beautiful-girl-with-hat-lh.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+header .overlay{
+    height: 100vh;
+    background: linear-gradient( 70deg,rgba(0,0,0,0.65) 40% ,rgba(255,255,255,0.4) )
+    
+}
+/*==== navbar====*/
+.navbar{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 70px;
+    height: 100%;
+    background-color:var(--main2color);
+    border-left:4px solid var(--maincolor);
+    text-align: center;
+}
+.navbar .logo  a{
+    background-color: var(--maincolor);
+    color: white;
+    padding: 10px 12px;
+    margin: 30px 5px;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+.navbar .navigation li{
+    position: relative;
+    margin: 20px 0;
+    
+}
+.navbar .navigation li a{
+    width: 30px;
+    height: 30px;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    border: 1px solid white;
+    color: white;
+    transition: ease 0.5s;
+}
+.navbar .navigation li a:hover{
+    border-color:transparent;
+    background-color: var(--maincolor);
+}
+.navbar .navigation li span{
+    position: absolute;
+    width: 70px;
+    left: -70px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: white;
+    background-color: var(--maincolor);
+    padding: 6px;
+    top: 3px;
+    opacity: 0;
+    transition: ease 0.5s;
+}
+.navbar .navigation li span::before{
+    content:"";
+    position: absolute;
+    border-width: 8px;
+    border-color: transparent transparent transparent var(--maincolor);
+    border-style:solid ;
+    right: -15px;
+    top: 5px;
+}
+.navbar .navigation li:hover span{
+    opacity: 1;
+}
+.navbar .scrolltop a{
+    width:70px;
+    height: 60px;
+    background-color: var(--maincolor);
+    color: white;
+    font-size: 1.5rem;
+    line-height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/*==== /navbar====*/
+
+/*==== header-content====*/
+header .header-content{
+    display:flex;
+    align-items:center;
+    height: 100%;
+}
+header .header-content .content h1{
+    font-size:4rem;
+    color: white;
+    margin-bottom: 10px;
+}
+header .header-content .content .animated-text{
+    position: relative;
+    perspective: 500px;  
+    height:30px;
+}
+header .header-content .content .animated-text span{
+    display:block;
+    position: absolute;
+    color: white;
+    font-size: 1.3rem;
+    height: 100%;
+    width: 100%;
+    transform: rotateX(90deg);
+    transition: 0.5s;
+    animation: rotate ease 5s infinite;
+}
+header .header-content .content .animated-text span:nth-child(2){
+    animation-delay: 1.5s;
+}
+header .header-content .content .animated-text span:nth-child(3){
+    animation-delay: 3s;
+}
+@keyframes rotate{
+    0%, 30%{
+        transform:rotateX(90deg);
+    }
+   15%{
+        transform:rotateX(0);
+    }
+}
+header .header-content .content button{
+    background-color: var(--maincolor);
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 35px;
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+header .header-content .content button::before{
+    content: "";
+    position: absolute;
+    width:0;
+    height:3px;
+    background-color: white;
+    bottom:0;
+    left: 0;
+    z-index: 2;
+    transition: ease 0.5s;
+}
+header .header-content .content button:hover::before{
+    width: 100%;
+}
+/*==== /header-content====*/
+
+/*==== /header====*/
+
+/*====introduce====*/
+section.introduce{
+    padding-bottom:0;
+}
+section.introduce .container .row h1.introducing{
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+section.introduce .container .row .img-holder{
+    width: 40%;
+    text-align: center;
+}
+section.introduce .container .row .img-holder .img{
+    height: 70%;
+}
+section.introduce .container .row .img-holder img{
+    width: 100%;
+    height: 100%;
+}
+section.introduce .container .row .img-holder ul {
+    background-color: var(--main2color);
+}
+section.introduce .container .row .img-holder ul li{
+    display: inline-block;
+    background-color: var(--maincolor);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin:10px;
+    transition: ease 0.5s;
+}
+section.introduce .container .row .img-holder ul li:hover{
+    border-radius: 50%;
+}
+section.introduce .container .row .img-holder ul li a{
+    color: var(--main2color);
+    font-size: 1.5rem;
+}
+section.introduce .container .row .img-info{
+    width: 56%;
+}
+section.introduce .container .row .img-info h3{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+section.introduce .container .row .img-info h1.have{
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+section.introduce .container .row .img-info .row-c{
+    display: flex;    
+
+}
+section.introduce .container .row .img-info .row-c .img-clients{
+    margin-right:40px;  
+    text-align: center;  
+    border-left: 5px solid var(--maincolor);
+    border-bottom: 1.5px solid var(--maincolor) ;
+    padding:15px 60px 15px 25px;
+    margin-bottom: 50px;
+}
+section.introduce .container .row .img-info .row-c .img-clients h1{
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+section.introduce .container .row .img-info .row-c .img-clients h5{
+    font-size: 1.3rem;
+}
+section.introduce .container .row .img-info p{
+    margin-bottom: 30px;
+    font-size: 17px;
+    line-height: 25px;
+}
+section.introduce .container .row .img-info .analytic{
+    margin-bottom: 20px;
+}
+section.introduce .container .row .img-info .analytic h4{
+    font-size: 1.2rem;
+    margin-bottom:7px ;
+}
+section.introduce .container .row .img-info .analytic .analytic-line{
+    background-color: var(--maincolor);
+    width: 85%;
+    height: 10px;
+}
+/*====/introduce====*/
+
+/*====Expertise====*/
+section.Expertise{
+    background-color: var(--main2color);
+}
+section.Expertise .container h1{
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 70px;
+    position: relative;
+}
+section.Expertise .container h1::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: var(--maincolor);
+    bottom: -20px;
+    left: 0;
+}
+section.Expertise .container p.long{
+    color: white;
+    font-size: 1.1rem;
+    width: 45%;
+    line-height: 25px;
+    margin-bottom:60px;
+}
+section.Expertise .container .row .ARTICLE{
+    width: 31.5%;
+    background-color: rgba(51, 74, 90, 0.3);
+    border-radius: 5px;
+    margin: 15px 0;
+    padding: 15px ;
+    transition: ease 0.5s ;  
+}
+section.Expertise .container .row .ARTICLE:hover{
+    animation:translate 1s infinite;
+}    
+
+@keyframes translate{
+    0%,100%{
+      transform: translateY(0)
+    }
+    50%{
+      transform: translateY(-10px)
+    }
+}
+
+section.Expertise .container .row .ARTICLE span{
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+section.Expertise .container .row .ARTICLE h2{
+    margin-bottom: 20px;
+}
+section.Expertise .container .row .ARTICLE p{
+    color: rgb(207, 207, 207);
+    font-size: 1.3rem;
+    line-height: 25px;
+    width: 70%;
+}
+/*====/Expertise====*/
+
+/*====works====*/
+section.works .container h1{
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+section.works .container p{
+    width:50%;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+section.works .container .all ul li{
+    display: inline-block;   
+    text-align: center;
+    margin-bottom: 50px;    
+    font-size: 1.3rem;       
+}
+section.works .container .all ul li.anime{    
+    padding: 0 10px;  
+    position: relative;
+    z-index: 2;
+}
+section.works .container .all ul li::before,
+section.works .container .all ul li::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: var(--main2color); 
+    transition: ease 0.5s;  
+    z-index: 1;
+}
+section.works .container .all ul li::before{
+    left: 0;
+    top: 0;
+}
+section.works .container .all ul li::after{
+    top: 0;
+    right: 0;
+}
+section.works .container .all  ul  li:hover::after,
+section.works .container .all  ul  li:hover::before{
+    width:50%;
+}
+
+section.works .container .all ul li a{
+    color: var(--main2color);
+    position: relative;
+    z-index: 2;
+}
+section.works .container .all ul li a.main-color{
+    color: var(--maincolor);
+    padding: 0 25px;
+    background-color: var(--main2color);   
+}
+section.works .container .all ul li:hover a.an{
+    color: white;
+}
+section.works .container .row .project{
+    width: 31.5%;
+    background-color: var(--main2color);
+    margin-bottom: 50px;
+}
+section.works .container .row .project h3{
+    padding-left:  20px;
+    margin: 30px 0;
+}
+section.works .container .row .project .row-x{
+    padding-left:  20px;
+    display: flex;
+    position: relative;    
+}
+section.works .container .row .project .row-x p{
+    color: rgb(255, 255, 255);
+    margin-left:40px;
+    transition: ease 0.5s;
+}
+section.works .container .row .project .row-x .line{
+    background-color: var(--maincolor);
+    width: 30px;
+    height: 3px;
+    top: 8px;
+    position: absolute;
+    transition: ease 0.5s;  
+}
+section.works .container .row .project .row-x:hover .line{
+    width: 0px;
+}
+section.works .container .row .project .row-x:hover p{
+    margin-left: 20px;
+}
+/*====/works====*/
+
+/*===clients===*/
+section.client{
+    background-color: rgb(245, 245, 245);
+}
+section.client .container h1{
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+section.client .container  p.marg{
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    width: 50%;
+    line-height: 25px;
+}
+section.client .container .row .smith{
+    width: 49%;
+    background-color: var(--main2color);
+    padding: 20px 30px;
+}
+section.client .container .row .smith .row-star i{
+     color: var(--maincolor);
+     margin-top: 30px ;
+     margin-bottom: 20px;
+     font-size: 1.2rem;
+     margin-right:5px;
+}
+section.client .container .row .smith .row-star h2{
+     color: white;
+     margin-bottom: 15px;
+}
+section.client .container .row .smith p{
+    color: white;
+    width: 80%;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+section.client .container .row .smith .row-info{
+    display: flex;
+    justify-content: space-between;
+}
+section.client .container .row .smith .row-img img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+/*===/clients===*/
+
+/*===post===*/
+section.post .container h1{
+   font-size:2.5rem ;
+   margin-bottom: 50px;
+   position: relative;
+}
+section.post .container h1::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: var(--maincolor);
+    bottom: -20px;
+    left: 0;
+}
+section.post .container p.marg{
+    font-size: 1.2rem;
+    width: 50%;
+    margin-bottom: 30px;
+}
+section.post .container .row .client-info{
+    width: 32%;
+    position: relative;
+    overflow: hidden;
+}
+section.post .container .row .client-info .img-info{
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+    background-color: var(--main2color);
+    opacity: 0.9;
+    padding: 25px 20px; 
+    transition: ease 0.7s;
+}
+section.post .container .row .client-info .img-info:hover{
+    bottom: 0px;
+}
+section.post .container .row .client-info .img-info .row-info{
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 25px;
+}
+section.post .container .row .client-info .img-info .row-info a{
+    color: white;
+}
+section.post .container .row .client-info .img-info h2{
+    margin-bottom: 20px;
+}
+section.post .container .row .client-info .img-info p{
+    color: white;
+    line-height: 25px;
+    font-size: 1.2rem;
+    width: 85%;
+}
+/*===Conversation===*/
+section.Conversation{
+    background-color: var(--main2color);
+}
+section.Conversation .container .row form .inputs{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap:nowrap ;
+}
+section.Conversation .container .row form .inputs .first,
+section.Conversation .container .row form .inputs .last{
+    width:45%;
+    margin: 0;
+    padding: 0;
+}
+section.Conversation .container .row form .inputs .first  input,
+section.Conversation .container .row form .inputs .last  input{
+    width:100%;
+    margin: 0px;
+    padding: 0;
+}
+section.Conversation .container .row form input{
+    height: 20px;
+    color: white;
+    text-transform: capitalize;
+    padding: 15px;
+    border: none;
+    background-color: transparent;
+    border-bottom:1.5px solid var(--maincolor);
+    
+}
+section.Conversation .container .row form textarea{
+    width: 100%;
+    color: white;
+    text-transform: capitalize;
+    padding: 15px;
+    border: none;
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: transparent;
+    border-bottom:1.5px solid var(--maincolor);
+}
+section.Conversation .container .row form button{
+    background-color: var(--maincolor);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    width: 200px;
+    padding:10px 0;
+    margin-top: 20px;
+    position: relative;
+}
+section.Conversation .container .row form button::before{
+    content: "";
+    position: absolute;
+    width:0;
+    height:3px;
+    background-color: white;
+    bottom:0;
+    left: 0;
+    z-index: 2;
+    transition: ease 0.5s;
+}
+section.Conversation .container .row form button:hover::before{
+    width: 100%;
+}
+section.Conversation .container .row .map {
+    width: 48%;
+}
+section.Conversation .container h1,
+section.Conversation .container p{
+    color: white;
+    margin: 20px 0;
+}
+section.Conversation .container h1{
+    font-size: 2.2rem;
+}
+form{
+    width: 49%;
+}
+.form-data{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.fD{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+iframe{
+    width: 100%;
+}
+form input{
+    margin: 10px 0;
+}
+/*===/Conversation===*/
